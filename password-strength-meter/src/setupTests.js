@@ -1,0 +1,1 @@
+import '@testing-library/jest-dom' // para que matchers como toBeInTheDocument() esten disponibles en todos los tests.
