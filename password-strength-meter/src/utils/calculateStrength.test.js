@@ -39,7 +39,7 @@ describe('calculateStrength', () => {
     expect(calculateStrength('abcdefg1 ')).toBe('muy fuerte')// incluye espacio al final, 8 chars con número y espacio que cuenta como símbolo                               
   })
 
-  it('los espacios cuentan para la longitud', () => {
-    expect(calculateStrength('abc efg1')).toBe('fuerte') // incluye espacio en medio, 8 chars con número y espacio que cuenta como símbolo  por lo que es fuerte
+  it('los espacios cuentan para la longitud', () => { //se corrio el test con un espacio en medio, 8 chars sin número pero con espacio que cuenta para la longitud, por lo que no es débil
+    expect(calculateStrength('abcdef g')).toBe('media') // incluye espacio en medio, 8 chars sin número pero con espacio que cuenta para la longitud, por lo que no es débil
   })
 })
